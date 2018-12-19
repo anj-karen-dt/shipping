@@ -88,7 +88,7 @@ pipeline {
           }
         }
     }
-    /*
+    
     stage('Run health check in dev') {
       when {
         expression {
@@ -97,7 +97,7 @@ pipeline {
       }
       steps {
         echo "Waiting for the service to start..."
-        sleep 200
+        sleep 350
 
         container('jmeter') {
           script {
@@ -121,6 +121,7 @@ pipeline {
         }
       }
     }
+     
     stage('Run functional check in dev') {
       when {
         expression {
@@ -150,7 +151,7 @@ pipeline {
         }
       }
     }
-    */
+    
     stage('Mark artifact for staging namespace') {
       when {
         expression {
